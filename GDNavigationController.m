@@ -90,7 +90,7 @@
     self.rootNavigationBar.title = self.topViewController.title;
     [self.topViewController.view addSubview:self.rootNavigationBar];
     
-    NSLog(@"%ld",self.childViewControllers.count);
+    NSLog(@"%ld",(unsigned long)self.childViewControllers.count);
     
     if (self.childViewControllers.count == 1) {
         self.rootNavigationBar.backItem.hidden = YES;
