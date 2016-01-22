@@ -7,54 +7,9 @@
 //
 
 #import "GDNavigationController.h"
-#import "GDNavigationBar.h"
-#import <objc/runtime.h>
-
-
-@interface UIViewController (GDNavigation)
-
-@property (nonatomic, strong) GDNavigationBar *navigatonBar;
-
-@property (nonatomic, getter=isNavigationBar) BOOL navigationBarHidden;
-
-@property (nonatomic, copy) NSString *title;
-
-@end
-
-@implementation UIViewController (GDNavigation)
-
-@dynamic navigatonBar;
-@dynamic navigationBarHidden;
-@dynamic title;
-
-- (GDNavigationBar *)navigatonBar {
-
-    return objc_getAssociatedObject(self, _cmd);
-}
-- (void)setnavigationBar:(GDNavigationBar *)navigationBar {
-
-    objc_setAssociatedObject(self, @selector(navigatonBar), navigationBar, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-- (BOOL)isNavigationBar {
-    return [objc_getAssociatedObject(self, _cmd) boolValue];
-}
-- (void)setNavigationBarHidden:(BOOL)navigationBarHidden {
-    objc_setAssociatedObject(self, @selector(isNavigationBar), @(navigationBarHidden), OBJC_ASSOCIATION_ASSIGN);
-}
-- (NSString *)title {
-    return objc_getAssociatedObject(self, _cmd);
-}
-- (void)setTitle:(NSString *)title {
-
-    objc_setAssociatedObject(self, @selector(title), title, OBJC_ASSOCIATION_COPY);
-}
-@end
-
-
 
 @interface GDNavigationController ()<UIGestureRecognizerDelegate>
 
-@property (nonatomic, strong) GDNavigationBar *rootNavigationBar;
 
 @end
 
@@ -63,42 +18,15 @@
 - (instancetype) initWithRootViewController:(UIViewController *)rootViewController {
     if (self = [super initWithRootViewController:rootViewController]) {
         self.maxAllowedInitialDistance = [UIScreen mainScreen].bounds.size.width;
-//        NSLog(@"66");
     }
     return self;
 }
--(instancetype)init
-{
-    if (self = [super init]) {
-        //默认触屏最大范围  全屏
-        self.maxAllowedInitialDistance = [UIScreen mainScreen].bounds.size.width;
-//        NSLog(@"75");
-    }
-    return self;
-}
+
 - (void)loadView {
     [super loadView];
     
-//    self.navigationBarHidden = YES;
-    
-//    self.rootNavigationBar = [[GDNavigationBar alloc] init];
-    
-//    [self.rootNavigationBar didClickBackItem:^{
-//        [self didClickBackitem];
-//
-//    }];
-//    self.rootNavigationBar.title = self.topViewController.title;
-//    [self.topViewController.view addSubview:self.rootNavigationBar];
-    
-//    NSLog(@"%ld",(unsigned long)self.childViewControllers.count);
-    
-//    if (self.childViewControllers.count == 1) {
-//        self.rootNavigationBar.backItem.hidden = YES;
-//    }
-    
     self.fullScreenPopGesture = YES;
     if (self.fullScreenPopGesture) {
-//        NSLog(@"22222");
         id target = self.interactivePopGestureRecognizer.delegate;
         SEL internalAction = NSSelectorFromString(@"handleNavigationTransition:");
         UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:target action:internalAction];
@@ -115,17 +43,6 @@
     // Do any additional setup after loading the view.
 }
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-//    GDNavigationBar *naviBar = [[GDNavigationBar alloc] init];
-    
-//    [naviBar didClickBackItem:^{
-//        [self didClickBackitem];
-//    }];
-//    [viewController.view addSubview:naviBar];
-    
-//    if (viewController.navigationBarHidden) {
-//        naviBar.hidden = YES;
-//    }
-//    naviBar.title = viewController.title;
     [super pushViewController:viewController animated:animated];
 
 }

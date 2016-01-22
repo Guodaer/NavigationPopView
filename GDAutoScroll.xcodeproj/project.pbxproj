@@ -17,7 +17,6 @@
 		B80E4D051C50B439002A9B56 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80E4D041C50B439002A9B56 /* SecondViewController.m */; };
 		B80E4D081C50B44D002A9B56 /* button_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B80E4D061C50B44D002A9B56 /* button_back@2x.png */; };
 		B80E4D091C50B44D002A9B56 /* button_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B80E4D071C50B44D002A9B56 /* button_back@3x.png */; };
-		B80E4D0C1C50B473002A9B56 /* GDNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B80E4D0B1C50B473002A9B56 /* GDNavigationBar.m */; };
 		B80E4D0F1C50B4D7002A9B56 /* GDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80E4D0E1C50B4D7002A9B56 /* GDNavigationController.m */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +57,6 @@
 		B80E4D041C50B439002A9B56 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B80E4D061C50B44D002A9B56 /* button_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_back@2x.png"; sourceTree = "<group>"; };
 		B80E4D071C50B44D002A9B56 /* button_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_back@3x.png"; sourceTree = "<group>"; };
-		B80E4D0A1C50B473002A9B56 /* GDNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDNavigationBar.h; sourceTree = "<group>"; };
-		B80E4D0B1C50B473002A9B56 /* GDNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDNavigationBar.m; sourceTree = "<group>"; };
 		B80E4D0D1C50B4D7002A9B56 /* GDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDNavigationController.h; sourceTree = "<group>"; };
 		B80E4D0E1C50B4D7002A9B56 /* GDNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,8 +89,6 @@
 		B80E4CB71C508100002A9B56 = {
 			isa = PBXGroup;
 			children = (
-				B80E4D0A1C50B473002A9B56 /* GDNavigationBar.h */,
-				B80E4D0B1C50B473002A9B56 /* GDNavigationBar.m */,
 				B80E4D0D1C50B4D7002A9B56 /* GDNavigationController.h */,
 				B80E4D0E1C50B4D7002A9B56 /* GDNavigationController.m */,
 				B80E4CC21C508100002A9B56 /* GDAutoScroll */,
@@ -292,7 +287,6 @@
 				B80E4D051C50B439002A9B56 /* SecondViewController.m in Sources */,
 				B80E4CC81C508100002A9B56 /* AppDelegate.m in Sources */,
 				B80E4CC51C508100002A9B56 /* main.m in Sources */,
-				B80E4D0C1C50B473002A9B56 /* GDNavigationBar.m in Sources */,
 				B80E4D021C50B431002A9B56 /* FirstViewController.m in Sources */,
 				B80E4D0F1C50B4D7002A9B56 /* GDNavigationController.m in Sources */,
 			);
@@ -510,6 +504,7 @@
 				B80E4CEF1C508100002A9B56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B80E4CF01C508100002A9B56 /* Build configuration list for PBXNativeTarget "GDAutoScrollTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +513,7 @@
 				B80E4CF21C508100002A9B56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B80E4CF31C508100002A9B56 /* Build configuration list for PBXNativeTarget "GDAutoScrollUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +522,7 @@
 				B80E4CF51C508100002A9B56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
