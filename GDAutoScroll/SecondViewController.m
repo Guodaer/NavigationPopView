@@ -19,13 +19,15 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIButton *view = [[UIButton alloc] initWithFrame:CGRectMake(10, 20, 50, 20)];
-    view.backgroundColor = [UIColor yellowColor];
+//    UIButton *view = [[UIButton alloc] initWithFrame:CGRectMake(10, 20, 50, 20)];
+//    view.backgroundColor = [UIColor yellowColor];
+//    
+//    
+//    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithCustomView:view];
+//    
+//    self.navigationItem.leftBarButtonItem = left;
     
     
-    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithCustomView:view];
-    
-    self.navigationItem.leftBarButtonItem = left;
     
 }
 

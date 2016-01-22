@@ -79,26 +79,26 @@
 - (void)loadView {
     [super loadView];
     
-    self.navigationBarHidden = YES;
+//    self.navigationBarHidden = YES;
     
-    self.rootNavigationBar = [[GDNavigationBar alloc] init];
+//    self.rootNavigationBar = [[GDNavigationBar alloc] init];
     
 //    [self.rootNavigationBar didClickBackItem:^{
 //        [self didClickBackitem];
 //
 //    }];
-    self.rootNavigationBar.title = self.topViewController.title;
-    [self.topViewController.view addSubview:self.rootNavigationBar];
+//    self.rootNavigationBar.title = self.topViewController.title;
+//    [self.topViewController.view addSubview:self.rootNavigationBar];
     
-    NSLog(@"%ld",(unsigned long)self.childViewControllers.count);
+//    NSLog(@"%ld",(unsigned long)self.childViewControllers.count);
     
-    if (self.childViewControllers.count == 1) {
-        self.rootNavigationBar.backItem.hidden = YES;
-    }
+//    if (self.childViewControllers.count == 1) {
+//        self.rootNavigationBar.backItem.hidden = YES;
+//    }
     
     self.fullScreenPopGesture = YES;
     if (self.fullScreenPopGesture) {
-        NSLog(@"22222");
+//        NSLog(@"22222");
         id target = self.interactivePopGestureRecognizer.delegate;
         SEL internalAction = NSSelectorFromString(@"handleNavigationTransition:");
         UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:target action:internalAction];
@@ -115,17 +115,17 @@
     // Do any additional setup after loading the view.
 }
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    GDNavigationBar *naviBar = [[GDNavigationBar alloc] init];
+//    GDNavigationBar *naviBar = [[GDNavigationBar alloc] init];
     
 //    [naviBar didClickBackItem:^{
 //        [self didClickBackitem];
 //    }];
-    [viewController.view addSubview:naviBar];
+//    [viewController.view addSubview:naviBar];
     
-    if (viewController.navigationBarHidden) {
-        naviBar.hidden = YES;
-    }
-    naviBar.title = viewController.title;
+//    if (viewController.navigationBarHidden) {
+//        naviBar.hidden = YES;
+//    }
+//    naviBar.title = viewController.title;
     [super pushViewController:viewController animated:animated];
 
 }

@@ -32,7 +32,7 @@
     self.barLine.frame = CGRectMake(0, 63, GDWidth, 1);
     self.barLine.backgroundColor = [UIColor colorWithWhite:0.639 alpha:1];
     [self addSubview:self.barLine];
-    //返回按钮
+//    //返回按钮
 //    self.backItem =[UIButton buttonWithType:UIButtonTypeCustom];
 //    self.backItem.frame = CGRectMake(10, 20, 30, 44);
 //    [self.backItem setImage:[UIImage imageNamed:@"button_back"] forState:UIControlStateNormal];
