@@ -29,6 +29,12 @@
     [self.view addSubview:button];
     
 }
+- (void)viewWillAppear:(BOOL)animated {
+
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
+
+}
 - (void)btn {
     SecondViewController *sencond = [[SecondViewController alloc] init];
     [self.navigationController pushViewController:sencond animated:YES];

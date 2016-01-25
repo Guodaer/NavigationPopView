@@ -25,6 +25,15 @@
 - (void)loadView {
     [super loadView];
     
+    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavigationAlpha_0"] forBarMetrics:0];
+//    self.navigationBarHidden = YES;
+//    UIButton *view = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 50, 20)];
+//    [view setBackgroundImage:[UIImage imageNamed:@"button_back"] forState:UIControlStateNormal];
+//    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithCustomView:view];
+//    self.navigationItem.backBarButtonItem = left;
+    
+
+    
     self.fullScreenPopGesture = YES;
     if (self.fullScreenPopGesture) {
         id target = self.interactivePopGestureRecognizer.delegate;

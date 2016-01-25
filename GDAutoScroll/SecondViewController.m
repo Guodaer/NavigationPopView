@@ -19,8 +19,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-//    UIButton *view = [[UIButton alloc] initWithFrame:CGRectMake(10, 20, 50, 20)];
-//    view.backgroundColor = [UIColor yellowColor];
+//    UIButton *view = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 50, 20)];
+//    [view setImage:[UIImage imageNamed:@"button_back"] forState:UIControlStateNormal];
 //    
 //    
 //    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithCustomView:view];
